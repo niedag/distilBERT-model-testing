@@ -11,4 +11,10 @@ https://huggingface.co/docs/transformers/model_doc/distilbert
 
 Text classification using tokenization involves representing each document as a set of tokens or words. These tokens are often processed to remove stopwords, punctuation, and perform stemming or lemmatization.
 
-For classifying opinions (pos,neg,neutral), 
+For classifying opinions (pos,neg,neutral), the following sentiment analysis models were tested:
+
+- distilbert/distilbert-base-uncased-finetuned-sst-2-english
+- michellejieli/inappropriate_text_classifier
+
+
+Later I will try to fine-tune my own version of BERT (instead of distilBERT) using the same dataset from MichelleJieli's model. Later I will compare and contrast the test error between different sentiment analysis models pretrained on the same dataset.
