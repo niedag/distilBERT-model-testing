@@ -6,16 +6,22 @@ import numpy as np
 
 from datasets import load_dataset, load_metric
 from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification
+from huggingface_hub import notebook_login, login
 
 def preprocess_function(examples): # For preparing the text inputs for the model
     return tokenizer(examples["text"],truncation = True)
 
+# For computing evaluation metrics
 def compute_metrics(eval_pred):
     load_accuracy = load_metric("accuracy")
     load_f1 = load_metric("f1")
 
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis = -1)
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+    f1 = load_f1.compute(predictions=predictions, references = labels)["f1"]
+    return {"accuracy": accuracy, "f1": f1}
+
 
 imdb = load_dataset("imdb") # Loads from Hugging Face - large database of movie reviews
 
