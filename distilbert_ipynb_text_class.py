@@ -31,4 +31,3 @@ inputs = tkzr(review, max_length=MAX_LEN, truncation=True, padding=True)
 print(f'review: \'{review}\'')
 print(f'input ids: {inputs["input_ids"]}')
 print(f'attention mask: {inputs["attention_mask"]}')
-

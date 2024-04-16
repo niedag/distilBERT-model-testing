@@ -8,7 +8,6 @@ data = [
     "There is no Easter Bunny, there is no Tooth Fairy, and there is no Queen of England."
     "This is the real world, and you need to wake up! You dare challenge Megamind? This town isn't big enough for two supervillains."
     "Oh, you're a villain alright, just not a super one. Yeah? What's the difference? Presentation!"
-
     # "I love my country so much",
     # "God bless America",
     # "I feel so good about the changes I'm making!",
