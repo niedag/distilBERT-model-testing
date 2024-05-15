@@ -20,3 +20,5 @@ For classifying opinions (pos,neg,neutral), the following sentiment analysis mod
 Later I will try to fine-tune my own version of BERT (instead of distilBERT) using the same dataset from MichelleJieli's model. Later I will compare and contrast the test error between different sentiment analysis models pretrained on the same dataset.
 
 After the model is fine-tuned, it is possible to save the model using a command in the pytorch/tensorflow library and call it locally instead of referencing a cloud stored model on Hugging Face 
+
+Next, a study will be performed applying models from Google's model garden 
